@@ -1,0 +1,90 @@
+SET
+ quintile | customers | net_revenue | revenue_share_pct 
+----------+-----------+-------------+-------------------
+        1 |      1171 |    12562765 |              76.8
+        2 |      1171 |     2139813 |              13.1
+        3 |      1170 |      999159 |               6.1
+        4 |      1170 |      478034 |               2.9
+        5 |      1170 |      181813 |               1.1
+(5 rows)
+
+   stage    | customers | pct_of_all 
+------------+-----------+------------
+ 1+ orders  |      5852 |      100.0
+ 2+ orders  |      4234 |       72.4
+ 3+ orders  |      3289 |       56.2
+ 5+ orders  |      2141 |       36.6
+ 10+ orders |       961 |       16.4
+(5 rows)
+
+ cohort  | cohort_size |  m1  |  m2  |  m3  |  m6  
+---------+-------------+------+------+------+------
+ 2009-12 |         951 | 35.0 | 33.3 | 42.5 | 37.6
+ 2010-01 |         368 | 21.5 | 32.1 | 31.5 | 26.9
+ 2010-02 |         375 | 23.5 | 22.7 | 29.3 | 19.2
+ 2010-03 |         441 | 19.0 | 23.1 | 24.3 | 24.7
+ 2010-04 |         294 | 19.0 | 19.0 | 16.0 | 27.6
+ 2010-05 |         255 | 15.7 | 16.9 | 17.6 | 21.2
+ 2010-06 |         267 | 17.6 | 18.7 | 20.6 | 12.7
+ 2010-07 |         185 | 15.7 | 18.4 | 29.7 | 11.4
+ 2010-08 |         163 | 19.6 | 28.8 | 32.5 |  9.8
+ 2010-09 |         239 | 23.0 | 23.4 | 13.0 | 13.8
+ 2010-10 |         375 | 25.9 | 14.7 | 12.5 | 13.1
+ 2010-11 |         326 | 17.5 |  9.5 |  9.5 | 12.9
+ 2010-12 |          76 |  9.2 |  5.3 |  9.2 |  5.3
+(13 rows)
+
+       segment       | customers | net_revenue | revenue_share_pct | pct_matching_python 
+---------------------+-----------+-------------+-------------------+---------------------
+ Champions           |       828 |     8572611 |              52.4 |               100.0
+ Loyal Customers     |      1153 |     4537338 |              27.7 |                99.9
+ At Risk             |       757 |      956478 |               5.8 |               100.0
+ Potential Loyalists |       711 |      623143 |               3.8 |                99.9
+ Hibernating         |      1511 |      605595 |               3.7 |               100.0
+ Can't Lose Them     |        72 |      478664 |               2.9 |               100.0
+ Need Attention      |       269 |      333429 |               2.0 |               100.0
+ About to Sleep      |       383 |      200367 |               1.2 |               100.0
+ Promising           |       114 |       35479 |               0.2 |               100.0
+ New Customers       |        54 |       18480 |               0.1 |               100.0
+(10 rows)
+
+       segment       | high_risk | medium_risk | low_risk | lapsed | revenue_at_risk_90d 
+---------------------+-----------+-------------+----------+--------+---------------------
+ Loyal Customers     |        28 |         581 |      544 |      0 |              201111
+ Champions           |         4 |         152 |      672 |      0 |              135923
+ Potential Loyalists |       228 |         423 |       59 |      0 |               83005
+ Need Attention      |       100 |         166 |        3 |      0 |               40805
+ About to Sleep      |       328 |          55 |        0 |      0 |               36392
+ At Risk             |       132 |         205 |        0 |    421 |               31201
+ Hibernating         |       356 |          13 |        0 |   1142 |               29988
+ Can't Lose Them     |        10 |          34 |        0 |     28 |                8796
+ Promising           |        74 |          40 |        0 |      0 |                7324
+ New Customers       |        19 |          35 |        0 |      0 |                3690
+(10 rows)
+
+ customer_id |  home_country  |       segment       | risk_tier | churn_probability | annual_value | expected_recovery |                   recommended_action                    
+-------------+----------------+---------------------+-----------+-------------------+--------------+-------------------+---------------------------------------------------------
+       15098 | United Kingdom | Need Attention      | High      |             0.919 |     39619.50 |           1365.16 | Limited-time offer based on past categories
+       15749 | United Kingdom | At Risk             | Medium    |             0.808 |     21535.90 |            652.74 | Personal outreach + win-back discount before they lapse
+       16029 | United Kingdom | Loyal Customers     | Low       |             0.216 |     56098.41 |            455.25 | Upsell higher-margin lines; loyalty tier benefits
+       18102 | United Kingdom | Champions           | Low       |             0.035 |    231822.69 |            303.23 | Reward & referral programme; early access to new ranges
+       17450 | United Kingdom | Champions           | Low       |             0.042 |    187546.69 |            293.65 | Reward & referral programme; early access to new ranges
+       12590 | Germany        | Hibernating         | High      |             0.838 |      9338.38 |            293.31 | Low-cost seasonal campaign only (e.g. pre-Christmas)
+       14646 | Netherlands    | Champions           | Low       |             0.027 |    278778.02 |            279.57 | Reward & referral programme; early access to new ranges
+       12415 | Australia      | Loyal Customers     | Low       |             0.057 |    123638.18 |            265.71 | Upsell higher-margin lines; loyalty tier benefits
+       12753 | Japan          | Loyal Customers     | Low       |             0.279 |     21024.01 |            219.75 | Upsell higher-margin lines; loyalty tier benefits
+       13093 | United Kingdom | Can't Lose Them     | Medium    |             0.770 |      6942.07 |            200.53 | Account-manager call; tailored offer — highest priority
+       16000 | United Kingdom | Potential Loyalists | Low       |             0.423 |     12393.70 |            196.76 | Membership offer; personalised recommendations
+       12409 | Switzerland    | Loyal Customers     | Low       |             0.473 |     11056.93 |            196.20 | Upsell higher-margin lines; loyalty tier benefits
+       12357 | Switzerland    | Potential Loyalists | Medium    |             0.765 |      6207.67 |            178.06 | Membership offer; personalised recommendations
+       16180 | United Kingdom | Loyal Customers     | Low       |             0.450 |     10217.48 |            172.46 | Upsell higher-margin lines; loyalty tier benefits
+       12557 | Spain          | Champions           | Low       |             0.378 |     11370.96 |            161.29 | Reward & referral programme; early access to new ranges
+(15 rows)
+
+       campaign_tier        | customers | revenue_at_risk_90d | expected_recovery 
+----------------------------+-----------+---------------------+-------------------
+ Tier 1 - personal outreach |       852 |              282651 |             42398
+ Tier 2 - automated email   |      1278 |              175210 |             26281
+ No campaign                |      3722 |              120376 |             18057
+(3 rows)
+

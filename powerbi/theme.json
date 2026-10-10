@@ -1,0 +1,31 @@
+{
+  "name": "Retail Retention Analytics",
+  "dataColors": ["#1B2A49", "#2A9D8F", "#E9C46A", "#E76F51", "#6C7A89", "#8AB6D6", "#264653", "#F4A261", "#A8DADC", "#9C6644"],
+  "background": "#FFFFFF",
+  "foreground": "#1B2A49",
+  "tableAccent": "#2A9D8F",
+  "good": "#2A9D8F",
+  "neutral": "#E9C46A",
+  "bad": "#E76F51",
+  "maximum": "#1B2A49",
+  "center": "#E9C46A",
+  "minimum": "#F4F1EA",
+  "textClasses": {
+    "title": { "fontFace": "Segoe UI Semibold", "fontSize": 14, "color": "#1B2A49" },
+    "header": { "fontFace": "Segoe UI Semibold", "fontSize": 12, "color": "#1B2A49" },
+    "label": { "fontFace": "Segoe UI", "fontSize": 10, "color": "#3D4A5C" },
+    "callout": { "fontFace": "Segoe UI Semibold", "fontSize": 26, "color": "#1B2A49" }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [{ "show": true, "color": { "solid": { "color": "#FFFFFF" } }, "transparency": 0 }],
+        "border": [{ "show": true, "color": { "solid": { "color": "#E3E1DA" } }, "radius": 8 }],
+        "dropShadow": [{ "show": false }]
+      }
+    },
+    "page": {
+      "*": { "background": [{ "color": { "solid": { "color": "#F4F1EA" } }, "transparency": 0 }] }
+    }
+  }
+}

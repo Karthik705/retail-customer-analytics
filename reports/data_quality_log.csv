@@ -1,0 +1,9 @@
+step,rows_affected,rows_remaining,line_value_remaining,note
+Raw data loaded (both sheets),0,1067371,19287250.57,
+Removed overlap between the two Excel sheets (2010-12-01 to 2010-12-09),22523,1044848,18909762.12,Same invoices appear in both yearly sheets
+Removed exact duplicate rows,11812,1033036,18855533.7,
+"Separated non-product lines (postage, fees, adjustments, vouchers)",5818,1027218,18927435.65,Saved to fact_fees; excluded from product analysis
+Separated cancelled/returned lines (invoice starts with 'C'),17914,1009304,19643861.62,Saved to fact_returns
+Removed lines with quantity <= 0 or price <= 0,5964,1003340,19643861.62,Stock adjustments / write-offs / zero-price samples
+Mapped missing Customer IDs to guest key 0 (kept for sales KPIs),226761,1003340,19643861.62,"Excluded from customer-level analysis (RFM, churn, cohorts)"
+"Standardised country names (EIRE->Ireland, RSA->South Africa, ...)",0,1003340,19643861.62,

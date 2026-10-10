@@ -1,0 +1,117 @@
+SET
+ gross_sales | returns_value | net_revenue | return_rate_pct | orders | customers | avg_order_value 
+-------------+---------------+-------------+-----------------+--------+-----------+-----------------
+    19643862 |        716426 |    18927436 |            3.65 |  39516 |      5852 |          497.11
+(1 row)
+
+ year_month | net_revenue | mom_growth_pct | yoy_growth_pct | ytd_running_total | moving_avg_3m 
+------------+-------------+----------------+----------------+-------------------+---------------
+ 2009-12    |      778343 |                |                |            778343 |        778343
+ 2010-01    |      604832 |          -22.3 |                |            604832 |        691587
+ 2010-02    |      525334 |          -13.1 |                |           1130166 |        636170
+ 2010-03    |      752102 |           43.2 |                |           1882268 |        627423
+ 2010-04    |      636316 |          -15.4 |                |           2518584 |        637917
+ 2010-05    |      606299 |           -4.7 |                |           3124883 |        664906
+ 2010-06    |      670246 |           10.5 |                |           3795129 |        637620
+ 2010-07    |      615862 |           -8.1 |                |           4410991 |        630802
+ 2010-08    |      661640 |            7.4 |                |           5072631 |        649249
+ 2010-09    |      841557 |           27.2 |                |           5914188 |        706353
+ 2010-10    |     1068985 |           27.0 |                |           6983173 |        857394
+ 2010-11    |     1394602 |           30.5 |                |           8377774 |       1101714
+ 2010-12    |      758091 |          -45.6 |           -2.6 |           9135865 |       1073892
+ 2011-01    |      578855 |          -23.6 |           -4.3 |            578855 |        910516
+ 2011-02    |      499464 |          -13.7 |           -4.9 |           1078320 |        612137
+ 2011-03    |      679329 |           36.0 |           -9.7 |           1757649 |        585883
+ 2011-04    |      482062 |          -29.0 |          -24.2 |           2239711 |        553618
+ 2011-05    |      731005 |           51.6 |           20.6 |           2970715 |        630799
+ 2011-06    |      723845 |           -1.0 |            8.0 |           3694561 |        645637
+ 2011-07    |      676812 |           -6.5 |            9.9 |           4371373 |        710554
+ 2011-08    |      701290 |            3.6 |            6.0 |           5072663 |        700649
+ 2011-09    |     1011340 |           44.2 |           20.2 |           6084002 |        796481
+ 2011-10    |     1061701 |            5.0 |           -0.7 |           7145704 |        924777
+ 2011-11    |     1427125 |           34.4 |            2.3 |           8572828 |       1166722
+ 2011-12    |      440400 |          -69.1 |          -41.9 |           9013228 |        976408
+(25 rows)
+
+        category        | gross_sales | revenue_share_pct | return_rate_pct | revenue_rank 
+------------------------+-------------+-------------------+-----------------+--------------
+ Kitchen & Dining       |     4735532 |              24.1 |            4.75 |            1
+ Home Decor             |     4208849 |              21.4 |            1.92 |            2
+ Bags & Storage         |     2416676 |              12.3 |            2.18 |            3
+ Lighting & Candles     |     1769427 |               9.0 |            4.04 |            4
+ Personal & Accessories |     1291870 |               6.6 |            1.64 |            5
+ Party & Gift Wrap      |     1164487 |               5.9 |            1.42 |            6
+ Other                  |     1156595 |               5.9 |            2.26 |            7
+ Christmas & Seasonal   |     1030295 |               5.2 |            2.02 |            8
+ Stationery & Crafts    |      846712 |               4.3 |           22.10 |            9
+ Toys & Kids            |      583750 |               3.0 |            1.35 |           10
+ Garden & Outdoor       |      439669 |               2.2 |            1.57 |           11
+(11 rows)
+
+ products_for_80pct | total_products | pct_of_products 
+--------------------+----------------+-----------------
+               1040 |           4894 |            21.3
+(1 row)
+
+        category        | rnk |             description             | revenue 
+------------------------+-----+-------------------------------------+---------
+ Bags & Storage         |   1 | JUMBO BAG RED RETROSPOT             |  182681
+ Bags & Storage         |   2 | JUMBO BAG PINK POLKADOT             |   76325
+ Bags & Storage         |   3 | LUNCH BAG RED RETROSPOT             |   71106
+ Christmas & Seasonal   |   1 | PAPER CHAIN KIT 50'S CHRISTMAS      |  117760
+ Christmas & Seasonal   |   2 | PAPER CHAIN KIT VINTAGE CHRISTMAS   |   58653
+ Christmas & Seasonal   |   3 | PAPER CHAIN KIT RETROSPOT           |   40413
+ Garden & Outdoor       |   1 | EDWARDIAN PARASOL NATURAL           |   60146
+ Garden & Outdoor       |   2 | EDWARDIAN PARASOL BLACK             |   48724
+ Garden & Outdoor       |   3 | RED RETROSPOT UMBRELLA              |   31268
+ Home Decor             |   1 | ASSORTED COLOUR BIRD ORNAMENT       |  129324
+ Home Decor             |   2 | DOORMAT UNION FLAG                  |   67010
+ Home Decor             |   3 | DOORMAT RED RETROSPOT               |   66417
+ Kitchen & Dining       |   1 | REGENCY CAKESTAND 3 TIER            |  330590
+ Kitchen & Dining       |   2 | MEDIUM CERAMIC TOP STORAGE JAR      |   81701
+ Kitchen & Dining       |   3 | SMALL POPCORN HOLDER                |   79520
+ Lighting & Candles     |   1 | WHITE HANGING HEART T-LIGHT HOLDER  |  261169
+ Lighting & Candles     |   2 | CHILLI LIGHTS                       |   80541
+ Lighting & Candles     |   3 | ROTATING SILVER ANGELS T-LIGHT HLDR |   71300
+ Other                  |   1 | ASSORTED COLOURS SILK FAN           |   32967
+ Other                  |   2 | CLOTHES PEGS RETROSPOT PACK 24      |   19513
+ Other                  |   3 | TRADITIONAL MODELLING CLAY          |   17862
+ Party & Gift Wrap      |   1 | PARTY BUNTING                       |  148318
+ Party & Gift Wrap      |   2 | VINTAGE UNION JACK BUNTING          |   60286
+ Party & Gift Wrap      |   3 | PAPER BUNTING RETROSPOT             |   50432
+ Personal & Accessories |   1 | HOT WATER BOTTLE TEA AND SYMPATHY   |   59189
+ Personal & Accessories |   2 | CHOCOLATE HOT WATER BOTTLE          |   57982
+ Personal & Accessories |   3 | SCOTTIE DOG HOT WATER BOTTLE        |   49772
+ Stationery & Crafts    |   1 | PAPER CRAFT , LITTLE BIRDIE         |  168470
+ Stationery & Crafts    |   2 | MINI PAINT SET VINTAGE              |   27818
+ Stationery & Crafts    |   3 | SET OF 72 RETROSPOT PAPER  DOILIES  |   21727
+ Toys & Kids            |   1 | HOME BUILDING BLOCK WORD            |   46517
+ Toys & Kids            |   2 | RED  HARMONICA IN BOX               |   42665
+ Toys & Kids            |   3 | LOVE BUILDING BLOCK WORD            |   34836
+(33 rows)
+
+   country   | region  | revenue | customers | avg_order_value | market_rank 
+-------------+---------+---------+-----------+-----------------+-------------
+ Ireland     | Europe  |  623414 |         3 |            1073 |           1
+ Netherlands | Europe  |  549773 |        22 |            2545 |           2
+ Germany     | Europe  |  383289 |       107 |             509 |           3
+ France      | Europe  |  311090 |        93 |             520 |           4
+ Australia   | Oceania |  167800 |        15 |            1885 |           5
+ Spain       | Europe  |   97767 |        38 |             679 |           6
+ Switzerland | Europe  |   94025 |        22 |            1106 |           7
+ Sweden      | Europe  |   86319 |        19 |             872 |           8
+ Denmark     | Europe  |   67423 |        12 |            1605 |           9
+ Belgium     | Europe  |   56993 |        29 |             399 |          10
+(10 rows)
+
+ day_name | before_10 | h10_13  | h13_16  | after_16 
+----------+-----------+---------+---------+----------
+ Mon      |    407446 | 1200602 | 1174633 |   633913
+ Tue      |    465566 | 1552993 | 1351775 |   509850
+ Wed      |    384888 | 1441602 | 1186220 |   362602
+ Thu      |    449606 | 1435630 | 1293765 |   831214
+ Fri      |    591181 | 1246649 | 1047950 |   280801
+ Sat      |           |    3401 |    5251 |     1151
+ Sun      |      2853 |  836335 |  865430 |    80556
+(7 rows)
+
